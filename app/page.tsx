@@ -53,7 +53,7 @@ export default function Portfolio() {
       category: "Frameworks",
     },
     {
-      name: "CodeIgniter 3/4",
+      name: "CodeIgniter",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg",
       category: "Frameworks",
     },
@@ -182,133 +182,166 @@ export default function Portfolio() {
 
   const projects = [
     {
-      title: "E-commerce Microservices Platform",
+      title: "Web E-commerce Microservices Platform",
       description:
-        "A scalable e-commerce platform built with microservices architecture, handling user management, product catalog, orders, and payments.",
-      image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Go", "PostgreSQL", "Redis", "Docker", "AWS"],
-      link: "https://github.com/example/ecommerce-platform",
-      highlights: ["Handles 50K+ concurrent users", "99.9% uptime", "Sub-100ms response time"],
-      isAccessible: false,
+        "A scalable e-commerce platform built with microservices architecture, handling user management, product catalog, orders, and payments. ",
+      image: "/ecommerce.png",
+      techStack: ["Go-Gin", "PostgreSQL", "Redis", "Docker", "AWS", "VueJS", "REST APIs", "RPC"],
+      link: "https://github.com/arvians-id/go-apriori-microservice",
+      highlights: ["Single Page Application", "Microservices", "Integrated with Payment Gateway", "Integrated with Apriori Algorithm"],
+      isAccessible: true,
     },
     {
       title: "Web Geographic Information Systems",
-      description:
-        "High-performance chat API with WebSocket support, message queuing, and real-time notifications for messaging applications.",
-      image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Redis", "Docker"],
-      link: "https://github.com/example/chat-api",
-      highlights: ["Real-time messaging", "Message persistence", "Scalable architecture"],
+      description: "A GIS website for mapping the population in each region of Sukabumi, marked by color-coded areas",
+      image: "/gis.png",
+      techStack: ["MySQL", "JavaScript", "Express JS", "Bootstrap"],
+      link: "https://github.com/arvians-id/web-gis",
+      highlights: ["Integrated with GIS", "Modern Tech Stack"],
       isAccessible: true,
     },
     {
-      title: "Surat Kuasa Elektronik",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
+      title: "Web Elektronik Pendaftaran Surat Kuasa",
+      description: "An electronic platform for providing power of attorney application services at the Sukabumi District Court",
+      image: "/esuka.png",
+      techStack: ["MySQL", "Docker", "CodeIgniter", "Bootstrap"],
+      link: "",
+      highlights: ["Integrated with Goverment", "Automated Reporting","Integrated with Payment Gateway", "Push Notification Users"],
+      isAccessible: false,
+    },
+    {
+      title: "Web Learning Management Systems",
+      description: "Teenager is a Learning Management System (LMS) designed to support individuals with visual and hearing impairments, enabling them to participate in learning equally like everyone else",
+      image: "/lms.jpeg",
+      techStack: ["Go-Gin", "Docker", "AWS", "JavaScript", "VueJS", "MySQL"],
+      link: "https://github.com/arvians-id/my-final-project",
+      highlights: ["Single Page Application", "Collaborate with Frontend Engineer"],
+      isAccessible: true,
+    },
+    {
+      title: "App Secure QRIS Order",
+      description: "Make your order secure with QRIS payment through the Tokopay+ app",
+      image: "/tokopay.jpeg",
+      techStack: ["Go-Gin", "Docker", "AWS", "PostgreSQL", "REST APIs", "Redis"],
+      link: "",
+      highlights: ["Collaborate with EP & Android Engineer", "Hackathon Winner 2023"],
+      isAccessible: false,
+    },
+    {
+      title: "Web Calculation Fuzzy Logic",
+      description: "",
+      image: "/fuzzylogic.jpg",
+      techStack: ["JavaScript", "Bootstrap"],
+      link: "https://github.com/arvians-id/fuzzy-logic",
+      highlights: ["Fuzzification Process", "Inferensi Process", "Defuzzification Process"],
+      isAccessible: true,
+    },
+    {
+      title: "Web Calculation Montecarlo",
+      description: "",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
+      techStack: ["JavaScript", "Bootstrap"],
+      link: "https://github.com/arvians-id/antrian-montecarlo",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
       isAccessible: true,
     },
     {
-      title: "Fuzzy Logic",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
-      image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      title: "Web Calculation Trapezoidal",
+      description: "",
+      image: "/trapezoidal.png",
+      techStack: ["JavaScript", "Bootstrap"],
+      link: "https://github.com/arvians-id/trapezoidal",
+      highlights: ["Result of Trapezium", "Extract Process", "Error Percentage"],
       isAccessible: true,
     },
     {
-      title: "Montecarlo Queueing",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
+      title: "Web Game Snake Apples",
+      description: "",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
-      isAccessible: true,
+      techStack: ["JavaScript", "Bootstrap"],
+      link: "",
+      highlights: ["Game Snake Apples"],
+      isAccessible: false,
     },
     {
-      title: "Snake Apples",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
+      title: "Web Rent Car",
+      description: "",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
-      isAccessible: true,
-    },
-    {
-      title: "Rent Car",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
-      image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      techStack: ["CodeIgniter", "MySQL", "PHP", "JQuery", "JavaScript"],
+      link: "https://github.com/arvians-id/rental-mobil",
+      highlights: ["User Management", "Order Management", "Report Management"],
       isAccessible: true,
     },
     {
       title: "Web Order Food Using LIFF",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
+      description: "",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      techStack: ["JQuery", "JavaScript"],
+      link: "https://github.com/arvians-id/line-front-end-framework",
+      highlights: ["Order Management", "Integrated with Line"],
       isAccessible: true,
     },
     {
-      title: "Inventory Management",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
+      title: "Web Inventory Management",
+      description: "",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      techStack: ["CodeIgniter", "MySQL", "PHP", "JQuery", "JavaScript"],
+      link: "https://github.com/arvians-id/inventory-v2",
+      highlights: ["User Management", "Order Management", "Report Management", "Stock Management"],
       isAccessible: true,
     },
     {
-      title: "Library Management",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
+      title: "Web Library Management",
+      description: "",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      techStack: ["CodeIgniter", "MySQL", "PHP", "JQuery", "JavaScript"],
+      link: "https://github.com/arvians-id/perpustakaan",
+      highlights: ["User Management", "Booking Management", "Report Management", "Stock Management"],
       isAccessible: true,
     },
     {
-      title: "Student Assessment Report",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
+      title: "Web Student Assessment Report",
+      description: "",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      techStack: ["CodeIgniter", "MySQL", "PHP", "JQuery", "JavaScript"],
+      link: "https://github.com/arvians-id/penilaian",
+      highlights: ["User Management", "Calculation of Grades", "Report Management"],
       isAccessible: true,
     },
     {
-      title: "Learning Management Systems",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
+      title: "Web Pencarian Kos",
+      description: "",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      techStack: ["CodeIgniter", "MySQL", "PHP", "JQuery", "JavaScript"],
+      link: "https://github.com/arvians-id/kosan",
+      highlights: ["User Management", "Booking Management", "Report Management"],
       isAccessible: true,
     },
     {
-      title: "Safe Order QRIS",
-      description:
-        "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
+      title: "Web Pencarian Lowongan Kerja",
+      description: "",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["PostgreSQL", "Docker", "GCP"],
-      link: "https://github.com/example/analytics-pipeline",
-      highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      techStack: ["CodeIgniter", "MySQL", "PHP", "JQuery", "JavaScript"],
+      link: "https://github.com/arvians-id/lowongan-kerja",
+      highlights: ["User Management", "Katalog Management", "Report Management"],
+      isAccessible: true,
+    },
+    {
+      title: "Web Booking Salon",
+      description: "",
+      image: "/placeholder.svg?height=200&width=300",
+      techStack: ["CodeIgniter", "MySQL", "PHP", "JQuery", "JavaScript"],
+      link: "https://github.com/arvians-id/salon",
+      highlights: ["User Management", "Booking Management", "Report Management"],
+      isAccessible: true,
+    },
+    {
+      title: "Web Pemesanan Internet",
+      description: "",
+      image: "/placeholder.svg?height=200&width=300",
+      techStack: ["CodeIgniter", "MySQL", "PHP", "JQuery", "JavaScript"],
+      link: "https://github.com/arvians-id/telkom",
+      highlights: ["User Management", "Booking Management", "Report Management"],
       isAccessible: true,
     },
   ]
@@ -330,7 +363,7 @@ export default function Portfolio() {
                 <span className="text-sm text-gray-500 mt-2">(he/him)</span>
               </div>
               <div className="flex items-center gap-4">
-                <p className="text-gray-400">Sofware Engineer - Backend</p>
+                <p className="text-gray-400">Sofware Engineer</p>
                 <div className="flex items-center gap-1 text-gray-400">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">South Jakarta, ID</span>
@@ -396,7 +429,7 @@ export default function Portfolio() {
               value="experience"
               className="data-[state=active]:bg-red-500/20 data-[state=active]:text-red-400 data-[state=active]:border-red-500/50"
             >
-              Experience
+              Exp
             </TabsTrigger>
             <TabsTrigger
               value="projects"
@@ -420,14 +453,9 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-300 leading-relaxed">
-                  Software engineer with 2 years of experience and a strong passion for back-end development. Possesses a solid foundation in building
-                  scalable systems and always eager to learn new technologies. Proficient in multiple programming languages, including Golang,
-                  JavaScript, and PHP. 
-                </p>
-                <p className="text-gray-300 leading-relaxed">
-                  Expertise spans multiple programming languages and technologies, with a strong focus on the Go programming language and other backend technologies. 
+                  Software engineer with 2+ years of experience. Expertise spans multiple programming languages and technologies, with a strong focus on the Go programming language and other backend technologies. 
                   Committed to writing clean, maintainable code and following
-                  best practices in software development.
+                  best practices in software development. 
                 </p>
                 <div className="mt-6">
                   <h3 className="text-lg font-semibold mb-3 text-red-400">Educations</h3>
@@ -435,7 +463,7 @@ export default function Portfolio() {
                     <div className="p-4 bg-gray-800 rounded-lg">
                       <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-2">
                         <div>
-                          <h4 className="font-semibold text-white">Bachelor of Science in Informatics Engineering</h4>
+                          <h4 className="font-semibold text-white">Bachelor's Degree in Informatics Engineering</h4>
                           <p className="text-gray-400">Muhammadiyah University of Sukabumi</p>
                         </div>
                         <Badge variant="outline" className="border-red-500/50 text-red-400 w-fit">
@@ -629,10 +657,12 @@ export default function Portfolio() {
                         <Button
                           size="sm"
                           variant="outline"
-                          className="border-gray-500/50 text-gray-400 cursor-not-allowed"
-                          disabled
+                          className="border-red-500/50 text-red-400 hover:bg-red-500/10"
+                          asChild
                         >
-                          <Lock className="w-4 h-4" />
+                          <a href="mailto:widdyarfiansyah00@gmail.com">
+                            <Mail className="w-4 h-4" />
+                          </a>
                         </Button>
                       )}
                     </div>
@@ -688,42 +718,40 @@ export default function Portfolio() {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <div>
-                    <div className="flex gap-3">
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="bg-black border-red-500/50 text-white hover:bg-red-500/10"
-                        asChild
-                      >
-                        <a href="mailto:widdyarfiansyah00@gmail.com">
-                          <Mail className="w-4 h-4 mr-2" />
-                          Email
-                        </a>
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="bg-black border-red-500/50 text-white hover:bg-red-500/10"
-                        asChild
-                      >
-                        <a href="https://github.com/arvians-id" target="_blank" rel="noopener noreferrer">
-                          <Github className="w-4 h-4 mr-2" />
-                          GitHub
-                        </a>
-                      </Button>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className="bg-black border-red-500/50 text-white hover:bg-red-500/10"
-                        asChild
-                      >
-                        <a href="https://www.linkedin.com/in/widdyarfian/" target="_blank" rel="noopener noreferrer">
-                          <Linkedin className="w-4 h-4 mr-2" />
-                          LinkedIn
-                        </a>
-                      </Button>
-                    </div>
+                  <div className="flex flex-wrap gap-3 justify-center md:justify-start">
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="bg-black border-red-500/50 text-white hover:bg-red-500/10 flex-shrink-0"
+                      asChild
+                    >
+                      <a href="mailto:widdyarfiansyah00@gmail.com">
+                        <Mail className="w-4 h-4 mr-2" />
+                        Email
+                      </a>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="bg-black border-red-500/50 text-white hover:bg-red-500/10 flex-shrink-0"
+                      asChild
+                    >
+                      <a href="https://github.com/arvians-id" target="_blank" rel="noopener noreferrer">
+                        <Github className="w-4 h-4 mr-2" />
+                        GitHub
+                      </a>
+                    </Button>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="bg-black border-red-500/50 text-white hover:bg-red-500/10 flex-shrink-0"
+                      asChild
+                    >
+                      <a href="https://www.linkedin.com/in/widdyarfian/" target="_blank" rel="noopener noreferrer">
+                        <Linkedin className="w-4 h-4 mr-2" />
+                        LinkedIn
+                      </a>
+                    </Button>
                   </div>
                 </CardContent>
               </Card>
@@ -736,7 +764,7 @@ export default function Portfolio() {
       <footer className="border-t border-gray-800 bg-gray-900 mt-auto">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-gray-400 text-sm">
-            <p>&copy; 2024 Arvians-ID</p>
+            <p>&copy; 2025 Arvians-ID</p>
           </div>
         </div>
       </footer>
