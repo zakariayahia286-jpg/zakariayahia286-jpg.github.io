@@ -5,49 +5,143 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import {
-  Mail,
-  Phone,
-  MapPin,
-  Github,
-  Linkedin,
-  ExternalLink,
-  Code,
-  Server,
-  Database,
-  Cloud,
-  Network,
-  Zap,
-} from "lucide-react"
+import { Mail, Phone, MapPin, Github, Linkedin, Zap, Lock } from "lucide-react"
 import Image from "next/image"
 
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("about")
 
   const skills = [
-    { name: "Go", icon: Code, category: "Languages" },
-    { name: "PHP", icon: Code, category: "Languages" },
-    { name: "JavaScript", icon: Code, category: "Languages" },
-    { name: "Go-Gin", icon: Code, category: "Frameworks" },
-    { name: "Go-Chi", icon: Code, category: "Frameworks" },
-    { name: "Laravel", icon: Code, category: "Frameworks" },
-    { name: "VueJS", icon: Code, category: "Frameworks" },
-    { name: "JQuery", icon: Code, category: "Frameworks" },
-    { name: "CodeIgniter 3/4", icon: Code, category: "Frameworks" },
-    { name: "Express JS", icon: Code, category: "Frameworks" },
-    { name: "Bootstrap", icon: Code, category: "Frameworks" },
-    { name: "Redis", icon: Database, category: "Databases" },
-    { name: "PostgreSQL", icon: Database, category: "Databases" },
-    { name: "MySQL", icon: Database, category: "Databases" },
-    { name: "GCP", icon: Database, category: "Cloud" },
-    { name: "AWS", icon: Database, category: "Cloud" },
-    { name: "Docker", icon: Server, category: "DevOps" },
-    { name: "Microservices", icon: Network, category: "Architecture" },
-    { name: "Message Queue", icon: Network, category: "Architecture" },
-    { name: "Clean Architecture", icon: Network, category: "Architecture" },
-    { name: "REST APIs", icon: Server, category: "APIs" },
-    { name: "RPC", icon: Server, category: "APIs" },
-    { name: "GraphQL", icon: Server, category: "APIs" },
+    {
+      name: "Go",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+      category: "Languages",
+    },
+    {
+      name: "PHP",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg",
+      category: "Languages",
+    },
+    {
+      name: "JavaScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+      category: "Languages",
+    },
+    {
+      name: "Go-Gin",
+      icon: "https://raw.githubusercontent.com/gin-gonic/logo/master/color.svg",
+      category: "Frameworks",
+    },
+    {
+      name: "Go-Chi",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg",
+      category: "Frameworks",
+    },
+    {
+      name: "Laravel",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/laravel/laravel-original.svg",
+      category: "Frameworks",
+    },
+    {
+      name: "VueJS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vuejs/vuejs-original.svg",
+      category: "Frameworks",
+    },
+    {
+      name: "JQuery",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg",
+      category: "Frameworks",
+    },
+    {
+      name: "CodeIgniter 3/4",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/codeigniter/codeigniter-plain.svg",
+      category: "Frameworks",
+    },
+    {
+      name: "Express JS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+      category: "Frameworks",
+    },
+    {
+      name: "Bootstrap",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg",
+      category: "Frameworks",
+    },
+    {
+      name: "Redis",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+      category: "Databases",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      category: "Databases",
+    },
+    {
+      name: "MySQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+      category: "Databases",
+    },
+    {
+      name: "GCP",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
+      category: "Cloud",
+    },
+    {
+      name: "AWS",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/amazonwebservices/amazonwebservices-original-wordmark.svg",
+      category: "Cloud",
+    },
+    {
+      name: "Docker",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      category: "DevOps",
+    },
+    {
+      name: "REST APIs",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg",
+      category: "APIs",
+    },
+    {
+      name: "RPC",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/grpc/grpc-original.svg",
+      category: "APIs",
+    },
+    {
+      name: "GraphQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+      category: "APIs",
+    },
+    {
+      name: "Git",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/git/git-original.svg",
+      category: "Tools",
+    },
+    {
+      name: "Postman",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/postman/postman-original.svg",
+      category: "Tools",
+    },
+    {
+      name: "Notion",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/notion/notion-original.svg",
+      category: "Tools",
+    },
+    {
+      name: "Message Queue",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/rabbitmq/rabbitmq-original.svg",
+      category: "Tools",
+    },
+    {
+      name: "Mockoon",
+      icon: "https://mockoon.com/images/logo-eyes-sticker.svg",
+      category: "Tools",
+    },
+    {
+      name: "Sonarqube",
+      icon: "https://raw.githubusercontent.com/devicons/devicon/6910f0503efdd315c8f9b858234310c06e04d9c0/icons/sonarqube/sonarqube-original.svg",
+      category: "Tools",
+    },
   ]
 
   const experiences = [
@@ -92,136 +186,136 @@ export default function Portfolio() {
       description:
         "A scalable e-commerce platform built with microservices architecture, handling user management, product catalog, orders, and payments.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Go", "PostgreSQL", "Redis", "Docker", "Kubernetes", "AWS"],
+      techStack: ["Go", "PostgreSQL", "Redis", "Docker", "AWS"],
       link: "https://github.com/example/ecommerce-platform",
       highlights: ["Handles 50K+ concurrent users", "99.9% uptime", "Sub-100ms response time"],
+      isAccessible: false,
     },
     {
       title: "Web Geographic Information Systems",
       description:
         "High-performance chat API with WebSocket support, message queuing, and real-time notifications for messaging applications.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Node.js", "Socket.io", "MongoDB", "Redis", "Docker"],
+      techStack: ["Redis", "Docker"],
       link: "https://github.com/example/chat-api",
       highlights: ["Real-time messaging", "Message persistence", "Scalable architecture"],
+      isAccessible: true,
     },
     {
       title: "Surat Kuasa Elektronik",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Fuzzy Logic",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Montecarlo Queueing",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Snake Apples",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Rent Car",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Web Order Food Using LIFF",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Inventory Management",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Library Management",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Student Assessment Report",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Learning Management Systems",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
     {
       title: "Safe Order QRIS",
       description:
         "ETL pipeline for processing large-scale analytics data with real-time streaming and batch processing capabilities.",
       image: "/placeholder.svg?height=200&width=300",
-      techStack: ["Python", "Apache Kafka", "PostgreSQL", "Docker", "GCP"],
+      techStack: ["PostgreSQL", "Docker", "GCP"],
       link: "https://github.com/example/analytics-pipeline",
       highlights: ["Processes 1M+ events/day", "Real-time analytics", "Automated reporting"],
+      isAccessible: true,
     },
   ]
 
   const getTechIcon = (tech: string) => {
-    const iconMap: { [key: string]: any } = {
-      Go: Code,
-      "Node.js": Server,
-      Python: Code,
-      PostgreSQL: Database,
-      MongoDB: Database,
-      Redis: Database,
-      Docker: Server,
-      Kubernetes: Cloud,
-      AWS: Cloud,
-      GCP: Cloud,
-      "Socket.io": Network,
-      "Apache Kafka": Network,
-    }
-    return iconMap[tech] || Code
+    const skill = skills.find((s) => s.name === tech)
+    return skill?.icon || "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/code/code-original.svg"
   }
 
   return (
@@ -235,7 +329,13 @@ export default function Portfolio() {
                 <h1 className="text-2xl md:text-3xl font-bold">Widdy Arfiansyah</h1>
                 <span className="text-sm text-gray-500 mt-2">(he/him)</span>
               </div>
-              <p className="text-gray-400">Software Engineer - Backend</p>
+              <div className="flex items-center gap-4">
+                <p className="text-gray-400">Sofware Engineer - Backend</p>
+                <div className="flex items-center gap-1 text-gray-400">
+                  <MapPin className="w-4 h-4" />
+                  <span className="text-sm">South Jakarta, ID</span>
+                </div>
+              </div>
             </div>
             <div className="flex items-center gap-4">
               <Button
@@ -277,7 +377,7 @@ export default function Portfolio() {
       </header>
 
       {/* Navigation Tabs */}
-      <div className="container mx-auto px-4 py-6">
+      <div className="container mx-auto px-4 py-6 flex-1">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
           <TabsList className="grid w-full grid-cols-5 bg-gray-900 border border-gray-800">
             <TabsTrigger
@@ -313,7 +413,7 @@ export default function Portfolio() {
           </TabsList>
 
           {/* About Section */}
-          <TabsContent value="about" className="mt-6">
+          <TabsContent value="about" className="mt-6 tab-transition">
             <Card className="bg-gray-900 border-gray-800">
               <CardHeader>
                 <CardTitle className="text-red-400">About Me</CardTitle>
@@ -325,8 +425,8 @@ export default function Portfolio() {
                   JavaScript, and PHP. 
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  My expertise spans multiple programming languages and technologies, with a strong focus on the Go programming language and other backend technologies. 
-                  I'm committed to writing clean, maintainable code and following
+                  Expertise spans multiple programming languages and technologies, with a strong focus on the Go programming language and other backend technologies. 
+                  Committed to writing clean, maintainable code and following
                   best practices in software development.
                 </p>
                 <div className="mt-6">
@@ -426,42 +526,49 @@ export default function Portfolio() {
           </TabsContent>
 
           {/* Skills Section */}
-          <TabsContent value="skills" className="mt-6">
+          <TabsContent value="skills" className="mt-6 tab-transition">
             <Card className="bg-gray-900 border-gray-800">
               <CardHeader>
                 <CardTitle className="text-red-400">Technical Skills</CardTitle>
-                <CardDescription>Technologies and tools I work with, along with some experiments I've explored</CardDescription>
+                <CardDescription className="text-white">Technologies and tools I work with</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
-                  {["Languages", "Frameworks", "Databases", "DevOps", "Cloud", "Architecture", "APIs"].map((category) => (
-                    <div key={category}>
-                      <h3 className="text-lg font-semibold mb-3 text-red-400">{category}</h3>
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                        {skills
-                          .filter((skill) => skill.category === category)
-                          .map((skill) => {
-                            const IconComponent = skill.icon
-                            return (
+                  {["Languages", "Frameworks", "Databases", "Cloud", "DevOps", "APIs", "Tools"].map(
+                    (category) => (
+                      <div key={category}>
+                        <h3 className="text-lg font-semibold mb-3 text-red-400">{category}</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                          {skills
+                            .filter((skill) => skill.category === category)
+                            .map((skill) => (
                               <div
                                 key={skill.name}
                                 className="flex items-center gap-2 p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors"
                               >
-                                <IconComponent className="w-5 h-5 text-red-400" />
+                                <img
+                                  src={skill.icon || "/placeholder.svg"}
+                                  alt={skill.name}
+                                  className="w-5 h-5"
+                                  onError={(e) => {
+                                    e.currentTarget.src =
+                                      "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/code/code-original.svg"
+                                  }}
+                                />
                                 <span className="text-sm text-white">{skill.name}</span>
                               </div>
-                            )
-                          })}
+                            ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ),
+                  )}
                 </div>
               </CardContent>
             </Card>
           </TabsContent>
 
           {/* Experience Section */}
-          <TabsContent value="experience" className="mt-6">
+          <TabsContent value="experience" className="mt-6 tab-transition">
             <div className="space-y-6">
               {experiences.map((exp, index) => (
                 <Card key={index} className="bg-gray-900 border-gray-800">
@@ -492,7 +599,7 @@ export default function Portfolio() {
           </TabsContent>
 
           {/* Projects Section */}
-          <TabsContent value="projects" className="mt-6">
+          <TabsContent value="projects" className="mt-6 tab-transition">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {projects.map((project, index) => (
                 <Card key={index} className="bg-gray-900 border-gray-800 overflow-hidden">
@@ -507,16 +614,27 @@ export default function Portfolio() {
                   <CardHeader>
                     <div className="flex items-start justify-between gap-2">
                       <CardTitle className="text-red-400">{project.title}</CardTitle>
-                      <Button
-                        size="sm"
-                        variant="outline"
-                        className="border-red-500/50 text-red-400 hover:bg-red-500/10"
-                        asChild
-                      >
-                        <a href={project.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="w-4 h-4" />
-                        </a>
-                      </Button>
+                      {project.isAccessible ? (
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="border-red-500/50 text-red-400 hover:bg-red-500/10"
+                          asChild
+                        >
+                          <a href={project.link} target="_blank" rel="noopener noreferrer">
+                            <Github className="w-4 h-4" />
+                          </a>
+                        </Button>
+                      ) : (
+                        <Button
+                          size="sm"
+                          variant="outline"
+                          className="border-gray-500/50 text-gray-400 cursor-not-allowed"
+                          disabled
+                        >
+                          <Lock className="w-4 h-4" />
+                        </Button>
+                      )}
                     </div>
                   </CardHeader>
                   <CardContent className="space-y-4">
@@ -537,15 +655,20 @@ export default function Portfolio() {
                     <div>
                       <h4 className="text-sm font-semibold mb-2 text-red-400">Tech Stack</h4>
                       <div className="flex flex-wrap gap-2">
-                        {project.techStack.map((tech) => {
-                          const IconComponent = getTechIcon(tech)
-                          return (
-                            <div key={tech} className="flex items-center gap-1 px-2 py-1 bg-gray-800 rounded text-xs">
-                              <IconComponent className="w-3 h-3 text-red-400" />
-                              {tech}
-                            </div>
-                          )
-                        })}
+                        {project.techStack.map((tech) => (
+                          <div key={tech} className="flex items-center gap-1 px-2 py-1 bg-gray-800 rounded text-xs">
+                            <img
+                              src={getTechIcon(tech) || "/placeholder.svg"}
+                              alt={tech}
+                              className="w-3 h-3"
+                              onError={(e) => {
+                                e.currentTarget.src =
+                                  "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/code/code-original.svg"
+                              }}
+                            />
+                            <span className="text-white">{tech}</span>
+                          </div>
+                        ))}
                       </div>
                     </div>
                   </CardContent>
@@ -555,7 +678,7 @@ export default function Portfolio() {
           </TabsContent>
 
           {/* Contact Section */}
-          <TabsContent value="contact" className="mt-6">
+          <TabsContent value="contact" className="mt-6 tab-transition">
             <div className="grid grid-cols-1 lg:grid-cols-1 gap-6">
               <Card className="bg-gray-900 border-gray-800">
                 <CardHeader>
@@ -610,10 +733,10 @@ export default function Portfolio() {
       </div>
       
       {/* Footer */}
-      <footer className="border-t border-gray-800 bg-gray-900 mt-12">
+      <footer className="border-t border-gray-800 bg-gray-900 mt-auto">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-gray-400 text-sm">
-            <p>&copy; 2025 arvians-id</p>
+            <p>&copy; 2024 Arvians-ID</p>
           </div>
         </div>
       </footer>
