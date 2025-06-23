@@ -363,7 +363,7 @@ export default function Portfolio() {
                 <span className="text-sm text-gray-500 mt-2">(he/him)</span>
               </div>
               <div className="flex items-center gap-4">
-                <p className="text-gray-400">Sofware Engineer</p>
+                <p className="text-gray-400">Software Engineer</p>
                 <div className="flex items-center gap-1 text-gray-400">
                   <MapPin className="w-4 h-4" />
                   <span className="text-sm">South Jakarta, ID</span>
@@ -558,7 +558,7 @@ export default function Portfolio() {
             <Card className="bg-gray-900 border-gray-800">
               <CardHeader>
                 <CardTitle className="text-red-400">Technical Skills</CardTitle>
-                <CardDescription className="text-white">Technologies and tools I work with</CardDescription>
+                <CardDescription className="text-white">Technologies and tools I work with, along with some experiments I've explored</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
