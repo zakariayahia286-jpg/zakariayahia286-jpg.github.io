@@ -453,9 +453,7 @@ export default function Portfolio() {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-gray-300 leading-relaxed">
-                  Software engineer with 2+ years of experience. Expertise spans multiple programming languages and technologies, with a strong focus on the Go programming language and other backend technologies. 
-                  Committed to writing clean, maintainable code and following
-                  best practices in software development. 
+                  Be a person who writes code elegantly
                 </p>
                 <div className="mt-6">
                   <h3 className="text-lg font-semibold mb-3 text-red-400">Educations</h3>
