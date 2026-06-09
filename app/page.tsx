@@ -17,18 +17,12 @@ export default function Home() {
       name: "Zakaria Alkhani",
       role: "Information Systems & E-Business Management",
       heroText: "4th-year student at Ajman University specializing in mapping complex systems, integrating emerging AI technologies, and optimizing enterprise digital platforms.",
-      buttons: { cv: "Download CV", touch: "Get In Touch", linkedin: "in LinkedIn" },
+      buttons: { cv: "Download CV", touch: "Get In Touch", linkedin: "LinkedIn" },
       aboutTitle: "About Me",
       aboutText: [
         "I am an energetic and analytical Information Systems professional. I specialize in bridging the gap between technical architecture and real-world business logic. My focus is on ensuring AI reliability, analyzing complex data, and streamlining enterprise operations.",
         "As a peer tutor, I assist other students by translating complex technical requirements into actionable, easy-to-understand lessons.",
         "When I step away from the digital world, I apply that same analytical exactness to baking, constantly experimenting with ingredient ratios to perfect my signature crinkly-top brownies and Cinnabons."
-      ],
-      stats: [
-        { label: "Enterprise Projects", value: "5+" },
-        { label: "Year of Study", value: "4th" },
-        { label: "SAP Certified", value: "Dual Study" },
-        { label: "Tech Tutor", value: "Active" }
       ],
       skillsTitle: "Skills & Tools",
       skills: [
@@ -42,23 +36,19 @@ export default function Home() {
       ],
       projTitle: "Projects",
       projects: [
-        { title: "Trustio - Secure Marketplace", desc: "Developed a secure, sustainability-focused web application tailored for the UAE market. Engineered a modular backend architecture to automate role-based access control (RBAC).", tech: ["Wix Studio", "JavaScript", "RBAC", "Database Design"] },
-        { title: "Customer Segmentation & AI Dashboard", desc: "Developed an interactive Power BI dashboard integrating Copilot AI. Implemented K-Means clustering algorithms and RFM analysis to segment customers.", tech: ["Power BI", "K-Means", "RFM Analysis", "Data Visualization"] },
-        { title: "Healthcare LLM RAG Pipeline", desc: "Architected a Retrieval-Augmented Generation (RAG) pipeline designed to minimize AI hallucinations in medical informatics using advanced defense-in-depth prompting.", tech: ["AI Prompting", "RAG", "System Logic"] },
-        { title: "GlucEase - HealthTech System Analysis", desc: "Managed the full Agile SDLC for a diabetes management solution. Created comprehensive UML diagrams and conducted ROI analysis aligning with UN goals.", tech: ["Agile SDLC", "UML", "System Analysis"] },
-        { title: "SQL Data Analysis Case Study", desc: "Leveraged PostgreSQL to perform complex data analysis, utilizing advanced JOINs, subqueries, and aggregate functions. Conducted rigorous data cleaning.", tech: ["PostgreSQL", "Data Cleaning", "Advanced SQL"] }
+        { title: "Trustio - Secure Marketplace", desc: "Developed a secure, sustainability-focused web application tailored for the UAE market. Engineered a modular backend architecture to automate role-based access control (RBAC).", tech: ["Wix Studio", "JavaScript", "RBAC"] },
+        { title: "Customer Segmentation & AI Dashboard", desc: "Developed an interactive Power BI dashboard integrating Copilot AI. Implemented K-Means clustering algorithms and RFM analysis.", tech: ["Power BI", "K-Means", "RFM Analysis"] },
+        { title: "Healthcare LLM RAG Pipeline", desc: "Architected a Retrieval-Augmented Generation (RAG) pipeline designed to minimize AI hallucinations in medical informatics using advanced prompting.", tech: ["AI Prompting", "RAG"] }
       ],
       expTitle: "Experience",
-      expCard: { role: "Information Systems & Digital Platforms Intern", company: "Sharjah Government Media Bureau", date: "May 2026 – Present", points: ["Mapping and optimizing digital media workflows and content distribution systems using UML.", "Managing and structuring enterprise-level digital platforms to support e-business objectives.", "Applying advanced AI prompt engineering to assist in the structured retrieval of media archives."] },
+      expCard: { role: "Information Systems & Digital Platforms Intern", company: "Sharjah Government Media Bureau", date: "May 2026 – Present", points: ["Mapping and optimizing digital media workflows using UML.", "Managing and structuring enterprise-level digital platforms.", "Applying advanced AI prompt engineering for media archives."] },
       eduTitle: "Education",
-      eduCard: { uni: "Ajman University", degree: "BSc Information Systems and E-Business Management", date: "2022 – Expected 2026", courses: "Relevant Coursework: Enterprise Systems, E-Commerce Infrastructure, Database Management, System Analysis & Design." },
+      eduCard: { uni: "Ajman University", degree: "BSc Information Systems and E-Business Management", date: "2022 – Expected 2026" },
       certTitle: "Courses & Certifications",
       certs: [
         { name: "SAP S/4HANA Cloud Public", issuer: "SAP", date: "Apr 2026" },
         { name: "AWS Academy Cloud Operations", issuer: "AWS", date: "Apr 2025" },
-        { name: "Fundamentals of AI Agents", issuer: "Various", date: "May 2026" },
-        { name: "Peer Tutoring Training", issuer: "Ajman University", date: "Oct 2025" },
-        { name: "Foundations of Digital Marketing", issuer: "Google", date: "Oct 2023" }
+        { name: "Fundamentals of AI Agents", issuer: "Various", date: "May 2026" }
       ]
     },
     ar: {
@@ -70,18 +60,17 @@ export default function Home() {
       heroText: "طالب في السنة الرابعة في جامعة عجمان، متخصص في تخطيط الأنظمة المعقدة، ودمج تقنيات الذكاء الاصطناعي، وتحسين المنصات الرقمية للمؤسسات.",
       buttons: { cv: "تحميل السيرة الذاتية", touch: "تواصل معي", linkedin: "لينكد إن" },
       aboutTitle: "نبذة عني",
-      aboutText: ["أنا متخصص حيوي وتحليلي في نظم المعلومات. أركز على سد الفجوة بين البنية التقنية ومنطق الأعمال الفعلي، وضمان موثوقية الذكاء الاصطناعي وتبسيط عمليات المؤسسات.", "كمعلم أقران، أساعد الطلاب الآخرين من خلال ترجمة المتطلبات التقنية المعقدة إلى دروس قابلة للتطبيق وسهلة الفهم.", "بعيداً عن الشاشات، أطبق نفس الدقة التحليلية في الخبز، حيث أقوم بتجربة نسب المكونات لإتقان وصفاتي الخاصة."],
-      stats: [{ label: "مشاريع مؤسسية", value: "+5" }, { label: "سنة الدراسة", value: "الرابعة" }, { label: "برنامج SAP", value: "معتمد" }, { label: "معلم تقني", value: "نشط" }],
+      aboutText: ["أنا متخصص حيوي وتحليلي في نظم المعلومات. أركز على سد الفجوة بين البنية التقنية ومنطق الأعمال الفعلي.", "كمعلم أقران، أساعد الطلاب الآخرين من خلال ترجمة المتطلبات التقنية المعقدة إلى دروس سهلة.", "بعيداً عن الشاشات، أطبق نفس الدقة التحليلية في الخبز."],
       skillsTitle: "المهارات والأدوات",
       skills: [{ name: "بنية UML", icon: <Layout className="w-8 h-8 text-blue-400" /> }, { name: "SAP S/4HANA", icon: <Briefcase className="w-8 h-8 text-blue-500" /> }, { name: "PostgreSQL", icon: <Database className="w-8 h-8 text-indigo-400" /> }, { name: "Power BI", icon: <Database className="w-8 h-8 text-yellow-500" /> }, { name: "AWS Cloud", icon: <Code className="w-8 h-8 text-orange-400" /> }, { name: "هندسة الأوامر", icon: <Code className="w-8 h-8 text-purple-400" /> }, { name: "JavaScript / HTML", icon: <Code className="w-8 h-8 text-yellow-400" /> }],
       projTitle: "المشاريع",
-      projects: [{ title: "Trustio - منصة تجارة إلكترونية آمنة", desc: "تطوير تطبيق ويب آمن ومستدام مصمم لسوق الإمارات. هندسة بنية خلفية لأتمتة التحكم في الوصول المبني على الأدوار (RBAC).", tech: ["Wix Studio", "JavaScript", "RBAC"] }, { title: "لوحة تحكم Power BI لتصنيف العملاء", desc: "تطوير لوحة تحكم تفاعلية تدمج Copilot AI. تنفيذ خوارزميات K-Means وتحليل RFM لتقسيم العملاء.", tech: ["Power BI", "K-Means", "تحليل RFM"] }, { title: "تخفيف الهلوسة في نماذج الرعاية الصحية (RAG)", desc: "تصميم مسار توليد معزز بالاسترجاع (RAG) لتقليل هلوسة الذكاء الاصطناعي في المعلوماتية الطبية.", tech: ["هندسة الأوامر", "RAG"] }, { title: "تحليل وتصميم نظام GlucEase الصحي", desc: "إدارة دورة حياة تطوير البرمجيات لحل إدارة مرض السكري. إنشاء مخططات UML وتحليل العائد على الاستثمار.", tech: ["Agile SDLC", "UML", "تحليل الأنظمة"] }, { title: "دراسة حالة تحليل بيانات SQL", desc: "استخدام PostgreSQL لإجراء تحليل بيانات معقد وتنظيف البيانات لتحسين دقة التقارير.", tech: ["PostgreSQL", "تنظيف البيانات", "SQL متقدم"] }],
+      projects: [{ title: "Trustio - منصة تجارة إلكترونية آمنة", desc: "تطوير تطبيق ويب آمن ومستدام مصمم لسوق الإمارات.", tech: ["Wix Studio", "JavaScript", "RBAC"] }, { title: "لوحة تحكم Power BI", desc: "تطوير لوحة تحكم تفاعلية تدمج Copilot AI.", tech: ["Power BI", "K-Means", "تحليل RFM"] }, { title: "تخفيف الهلوسة في الذكاء الاصطناعي", desc: "تصميم مسار لتقليل هلوسة الذكاء الاصطناعي في المعلوماتية الطبية.", tech: ["هندسة الأوامر", "RAG"] }],
       expTitle: "الخبرة المهنية",
-      expCard: { role: "متدرب في نظم المعلومات والمنصات الرقمية", company: "المكتب الإعلامي لحكومة الشارقة", date: "مايو 2026 – الحاضر", points: ["تخطيط وتحسين مسارات عمل الوسائط الرقمية باستخدام مخططات UML.", "إدارة وهيكلة المنصات الرقمية لدعم أهداف الأعمال الإلكترونية.", "تطبيق تقنيات هندسة الأوامر لهيكلة واسترجاع الأرشيف الإعلامي."] },
+      expCard: { role: "متدرب في نظم المعلومات والمنصات الرقمية", company: "المكتب الإعلامي لحكومة الشارقة", date: "مايو 2026 – الحاضر", points: ["تخطيط وتحسين مسارات عمل الوسائط الرقمية.", "إدارة وهيكلة المنصات الرقمية.", "تطبيق تقنيات هندسة الأوامر."] },
       eduTitle: "التعليم",
-      eduCard: { uni: "جامعة عجمان", degree: "بكالوريوس نظم المعلومات وإدارة الأعمال الإلكترونية", date: "2022 – المتوقع 2026", courses: "المقررات: أنظمة المؤسسات، البنية التحتية للتجارة الإلكترونية، إدارة قواعد البيانات، تحليل وتصميم الأنظمة." },
+      eduCard: { uni: "جامعة عجمان", degree: "بكالوريوس نظم المعلومات وإدارة الأعمال الإلكترونية", date: "2022 – المتوقع 2026" },
       certTitle: "الدورات والشهادات",
-      certs: [{ name: "برنامج SAP S/4HANA Cloud Public", issuer: "SAP", date: "أبريل 2026" }, { name: "عمليات السحابة من أكاديمية AWS", issuer: "AWS", date: "أبريل 2025" }, { name: "أساسيات وكلاء الذكاء الاصطناعي", issuer: "متعدد", date: "مايو 2026" }, { name: "برنامج تدريب تعليم الأقران", issuer: "جامعة عجمان", date: "أكتوبر 2025" }, { name: "أساسيات التسويق الرقمي", issuer: "Google", date: "أكتوبر 2023" }]
+      certs: [{ name: "برنامج SAP S/4HANA Cloud Public", issuer: "SAP", date: "أبريل 2026" }, { name: "عمليات السحابة من أكاديمية AWS", issuer: "AWS", date: "أبريل 2025" }, { name: "أساسيات وكلاء الذكاء الاصطناعي", issuer: "متعدد", date: "مايو 2026" }]
     }
   }
 
@@ -112,7 +101,7 @@ export default function Home() {
           <p className="text-xl text-gray-400 max-w-2xl">{t.heroText}</p>
           <div className="flex flex-wrap gap-4 pt-4">
             <a href="/cv.pdf" download="Zakaria_Alkhani_CV.pdf" className="px-6 py-3 rounded-lg bg-[#D4AF37] text-black font-semibold flex items-center gap-2"><Download className="w-5 h-5" /> {t.buttons.cv}</a>
-            <a href="mailto:zakariayahia52@gmail.com" className="px-6 py-3 rounded-lg border border-gray-700">{t.buttons.touch}</a>
+            <a href="https://www.linkedin.com/in/zakaria-yahia-271073284" target="_blank" className="px-6 py-3 rounded-lg border border-gray-700 hover:border-white transition-colors flex items-center gap-2"><Linkedin className="w-5 h-5" /> {t.buttons.linkedin}</a>
           </div>
         </section>
 
@@ -128,10 +117,10 @@ export default function Home() {
 
         <section id="sec-2" className="pt-20">
           <h3 className="text-4xl font-bold mb-12 text-center">{t.projTitle}</h3>
-          <div className="bg-[#0F0F0F] border border-[#1A1A1A] rounded-3xl p-12 relative">
+          <div className="bg-[#0F0F0F] border border-[#1A1A1A] rounded-3xl p-12 text-center">
              <h4 className="text-3xl font-bold mb-4">{t.projects[activeProj].title}</h4>
              <p className="text-gray-400 text-lg mb-8">{t.projects[activeProj].desc}</p>
-             <div className="flex gap-4"><button onClick={prevProj}><ChevronLeft /></button><button onClick={nextProj}><ChevronRight /></button></div>
+             <div className="flex justify-center gap-4"><button onClick={prevProj} className="p-2 border border-gray-700 rounded-full"><ChevronLeft /></button><button onClick={nextProj} className="p-2 border border-gray-700 rounded-full"><ChevronRight /></button></div>
           </div>
         </section>
 
@@ -146,7 +135,7 @@ export default function Home() {
 
         <section id="sec-4" className="pt-20">
           <h3 className="text-4xl font-bold mb-12 text-center">{t.eduTitle}</h3>
-          <div className="bg-white text-black rounded-3xl p-12">
+          <div className="bg-white text-black rounded-3xl p-12 text-center">
              <h4 className="text-3xl font-bold">{t.eduCard.uni}</h4>
              <p className="text-xl font-bold text-[#8C7323]">{t.eduCard.degree}</p>
           </div>
@@ -154,9 +143,9 @@ export default function Home() {
 
         <section id="sec-5" className="pt-20 pb-20">
           <h3 className="text-4xl font-bold mb-12 text-center">{t.certTitle}</h3>
-          <div className="bg-[#0F0F0F] border border-[#1A1A1A] rounded-3xl p-8 flex flex-col items-center">
+          <div className="bg-[#0F0F0F] border border-[#1A1A1A] rounded-3xl p-12 text-center">
              <h4 className="text-xl font-bold text-white mb-4">{t.certs[activeCert].name}</h4>
-             <div className="flex gap-4"><button onClick={prevCert}><ChevronLeft /></button><button onClick={nextCert}><ChevronRight /></button></div>
+             <div className="flex justify-center gap-4"><button onClick={prevCert} className="p-2 border border-gray-700 rounded-full"><ChevronLeft /></button><button onClick={nextCert} className="p-2 border border-gray-700 rounded-full"><ChevronRight /></button></div>
           </div>
         </section>
       </div>
