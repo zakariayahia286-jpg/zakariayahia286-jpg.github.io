@@ -4,24 +4,19 @@ import { useState } from "react"
 import { Mail, Linkedin, Download, ChevronRight, ChevronLeft, Award, BookOpen, Briefcase, Code, Database, Layout } from "lucide-react"
 
 export default function Home() {
-  const [lang, setLang] = useState<'en' | 'ar'>('en')
   const [activeProj, setActiveProj] = useState(0)
   const [activeCert, setActiveCert] = useState(0)
-  const isAr = lang === 'ar'
 
-  const content = {
-    en: {
-      nav: ["About", "Skills", "Projects", "Experience", "Education", "Certs"],
-      toggleBtn: "AR",
-      status: "Interning @ Sharjah Government Media | Ajman University",
-      name: "Zakaria Alkhani",
-      role: "Information Systems & E-Business Management",
-      heroText: "4th-year student at Ajman University specializing in mapping complex systems, integrating emerging AI technologies, and optimizing enterprise digital platforms.",
-      buttons: { cv: "Download CV", touch: "Get In Touch", linkedin: "LinkedIn" },
-      aboutTitle: "About Me",
-      aboutText: ["Energetic Information Systems professional bridging technical architecture with business logic.", "Peer tutor translating technical requirements into actionable lessons.", "Analytical baker perfecting ingredient ratios for brownies and Cinnabons."],
-      skillsTitle: "Skills & Tools",
-      skills: [
+  const data = {
+    name: "Zakaria Alkhani",
+    role: "Information Systems & E-Business Management",
+    heroText: "4th-year student at Ajman University specializing in mapping complex systems, integrating emerging AI technologies, and optimizing enterprise digital platforms.",
+    about: [
+        "I am an energetic and analytical Information Systems professional. I specialize in bridging the gap between technical architecture and real-world business logic. My focus is on ensuring AI reliability, analyzing complex data, and streamlining enterprise operations.",
+        "As a peer tutor, I assist other students by translating complex technical requirements into actionable, easy-to-understand lessons.",
+        "When I step away from the digital world, I apply that same analytical exactness to baking, constantly experimenting with ingredient ratios to perfect my signature crinkly-top brownies and Cinnabons."
+    ],
+    skills: [
         { name: "UML Architecture", icon: <Layout className="w-8 h-8 text-blue-400" /> },
         { name: "SAP S/4HANA", icon: <Briefcase className="w-8 h-8 text-blue-500" /> },
         { name: "PostgreSQL", icon: <Database className="w-8 h-8 text-indigo-400" /> },
@@ -29,92 +24,67 @@ export default function Home() {
         { name: "AWS Cloud", icon: <Code className="w-8 h-8 text-orange-400" /> },
         { name: "Prompt Engineering", icon: <Code className="w-8 h-8 text-purple-400" /> },
         { name: "JavaScript / HTML", icon: <Code className="w-8 h-8 text-yellow-400" /> }
-      ],
-      projTitle: "Projects",
-      projects: [
-        { title: "Trustio - Secure Marketplace", desc: "Sustainable UAE web marketplace. Features: Custom Emirates ID verification, RBAC, and secure role-based buyer/seller dashboards.", tech: ["Wix Studio", "JS", "RBAC"] },
-        { title: "Customer Segmentation & AI Dashboard", desc: "Power BI integration with Copilot AI. Used K-Means clustering and RFM analysis to segment customers into 6 behavioral groups.", tech: ["Power BI", "K-Means", "RFM"] },
-        { title: "Healthcare LLM RAG Pipeline", desc: "Architected a Retrieval-Augmented Generation pipeline to mitigate AI hallucinations. Focus: Defense-in-depth prompting and data integrity.", tech: ["RAG", "Prompt Eng"] }
-      ],
-      expTitle: "Experience",
-      expCard: { role: "IS & Digital Platforms Intern", company: "Sharjah Govt Media Bureau", points: ["Optimizing workflows using UML.", "Managing enterprise platforms.", "AI-driven media archive retrieval."] },
-      eduTitle: "Education",
-      eduCard: { uni: "Ajman University", degree: "BSc IS & E-Business Management" },
-      certTitle: "Certifications",
-      certs: [
-        { name: "SAP S/4HANA Cloud Public", issuer: "SAP", date: "2026" },
-        { name: "AWS Cloud Operations", issuer: "AWS", date: "2025" },
-        { name: "AI Agents & Deep Learning", issuer: "Various", date: "2026" }
-      ]
-    },
-    ar: {
-      nav: ["حول", "المهارات", "المشاريع", "الخبرة", "التعليم", "الشهادات"],
-      toggleBtn: "EN",
-      status: "متدرب @ المكتب الإعلامي للشارقة | جامعة عجمان",
-      name: "زكريا الخاني",
-      role: "نظم المعلومات وإدارة الأعمال الإلكترونية",
-      heroText: "طالب في السنة الرابعة في جامعة عجمان، متخصص في تخطيط الأنظمة ودمج الذكاء الاصطناعي.",
-      buttons: { cv: "تحميل CV", touch: "تواصل معي", linkedin: "لينكد إن" },
-      aboutTitle: "نبذة عني",
-      aboutText: ["محترف نظم معلومات يركز على سد الفجوة بين البنية التقنية ومنطق الأعمال.", "معلم أقران يترجم المتطلبات التقنية إلى دروس سهلة.", "أطبق الدقة التحليلية في الخبز والمشاريع التقنية."],
-      skillsTitle: "المهارات",
-      skills: [{ name: "بنية UML", icon: <Layout className="w-8 h-8 text-blue-400" /> }, { name: "SAP S/4HANA", icon: <Briefcase className="w-8 h-8 text-blue-500" /> }, { name: "PostgreSQL", icon: <Database className="w-8 h-8 text-indigo-400" /> }, { name: "Power BI", icon: <Database className="w-8 h-8 text-yellow-500" /> }, { name: "AWS Cloud", icon: <Code className="w-8 h-8 text-orange-400" /> }, { name: "هندسة الأوامر", icon: <Code className="w-8 h-8 text-purple-400" /> }, { name: "JS/HTML", icon: <Code className="w-8 h-8 text-yellow-400" /> }],
-      projTitle: "المشاريع",
-      projects: [{ title: "Trustio - سوق آمن", desc: "منصة تجارة إلكترونية مستدامة، التحقق من الهوية الإماراتية، ونظام أدوار (RBAC).", tech: ["Wix", "JS"] }, { title: "لوحة تحكم ذكاء الأعمال", desc: "تحليل العملاء باستخدام K-Means وPower BI.", tech: ["Power BI", "RFM"] }, { title: "نظام RAG الطبي", desc: "بناء مسار لتقليل هلوسة الذكاء الاصطناعي في الطب.", tech: ["RAG", "Prompting"] }],
-      expTitle: "الخبرة",
-      expCard: { role: "متدرب نظم المعلومات", company: "المكتب الإعلامي لحكومة الشارقة", points: ["تحسين سير العمل باستخدام UML.", "إدارة المنصات المؤسسية.", "أتمتة الأرشيف الإعلامي."] },
-      eduTitle: "التعليم",
-      eduCard: { uni: "جامعة عجمان", degree: "بكالوريوس نظم معلومات" },
-      certTitle: "الشهادات",
-      certs: [{ name: "SAP S/4HANA", issuer: "SAP", date: "2026" }, { name: "AWS Cloud", issuer: "AWS", date: "2025" }, { name: "ذكاء اصطناعي", issuer: "متعدد", date: "2026" }]
-    }
+    ],
+    projects: [
+        { title: "Trustio - Secure Marketplace", desc: "Developed a secure, sustainability-focused web application tailored for the UAE market. Engineered a modular backend architecture to automate role-based access control.", tech: ["Wix Studio", "JavaScript", "RBAC"] },
+        { title: "Customer Segmentation & AI Dashboard", desc: "Developed an interactive Power BI dashboard integrating Copilot AI. Implemented K-Means clustering algorithms and RFM analysis.", tech: ["Power BI", "K-Means", "RFM Analysis"] },
+        { title: "Healthcare LLM RAG Pipeline", desc: "Architected a Retrieval-Augmented Generation (RAG) pipeline designed to minimize AI hallucinations in medical informatics using advanced prompting.", tech: ["AI Prompting", "RAG", "System Logic"] },
+        { title: "GlucEase - HealthTech System Analysis", desc: "Managed the full Agile SDLC for a diabetes management solution. Created comprehensive UML diagrams and conducted ROI analysis.", tech: ["Agile SDLC", "UML", "System Analysis"] },
+        { title: "SQL Data Analysis Case Study", desc: "Leveraged PostgreSQL to perform complex data analysis, utilizing advanced JOINs, subqueries, and aggregate functions.", tech: ["PostgreSQL", "Data Cleaning", "Advanced SQL"] }
+    ],
+    experience: { role: "Information Systems & Digital Platforms Intern", company: "Sharjah Government Media Bureau", date: "May 2026 – Present", points: ["Mapping and optimizing digital media workflows using UML.", "Managing enterprise-level digital platforms to support e-business.", "Applying AI prompt engineering to manage media archives."] },
+    education: { uni: "Ajman University", degree: "BSc Information Systems and E-Business Management", date: "2022 – Expected 2026" },
+    certs: [
+        { name: "SAP S/4HANA Cloud Public", issuer: "SAP", date: "Apr 2026" },
+        { name: "AWS Academy Cloud Operations", issuer: "AWS", date: "Apr 2025" },
+        { name: "Fundamentals of AI Agents", issuer: "Various", date: "May 2026" },
+        { name: "Peer Tutoring Training", issuer: "Ajman University", date: "Oct 2025" },
+        { name: "Digital Marketing & E-Commerce", issuer: "Google", date: "Oct 2023" }
+    ]
   }
 
-  const t = content[lang]
-  const next = (c: any, setter: any, cur: any) => setter((cur + 1) % c.length)
-  const prev = (c: any, setter: any, cur: any) => setter((cur - 1 + c.length) % c.length)
-
   return (
-    <main className={`min-h-screen bg-[#050505] text-[#E0E0E0] ${isAr ? 'text-right' : 'text-left'}`} dir={isAr ? 'rtl' : 'ltr'}>
-      <nav className="fixed w-full bg-[#050505]/80 backdrop-blur-md z-50 border-b border-[#1A1A1A] px-6 py-4 flex justify-between items-center">
-        <span className="font-bold text-[#D4AF37]">ZA</span>
-        <button onClick={() => setLang(isAr ? 'en' : 'ar')} className="px-4 py-1 rounded-full border border-gray-700 text-sm">{isAr ? 'EN' : 'AR'}</button>
-      </nav>
-
-      <div className="max-w-5xl mx-auto px-6 pt-32 space-y-32">
-        {/* Hero */}
+    <main className="min-h-screen bg-[#050505] text-[#E0E0E0] font-sans p-6 md:p-20">
+      <div className="max-w-5xl mx-auto space-y-32">
         <section className="space-y-6">
-          <h1 className="text-7xl font-extrabold">{t.name}</h1>
-          <p className="text-xl text-gray-400">{t.heroText}</p>
-          <a href="/cv.pdf" download="Zakaria_Alkhani_CV.pdf" className="inline-block px-6 py-3 rounded-lg bg-[#D4AF37] text-black font-semibold"><Download className="inline mr-2" /> {t.buttons.cv}</a>
-        </section>
-
-        {/* Interactive Skills */}
-        <section id="sec-1" className="pt-20 text-center">
-          <h3 className="text-4xl font-bold mb-12">{t.skillsTitle}</h3>
-          <div className="flex flex-wrap justify-center gap-6">
-            {t.skills.map((s, i) => (
-              <div key={i} className="bg-[#0F0F0F] border border-[#1A1A1A] rounded-2xl p-6 flex flex-col items-center w-[150px] transition-all hover:scale-110 hover:border-[#D4AF37] hover:shadow-lg hover:shadow-[#D4AF37]/20">
-                {s.icon}<span className="mt-4 text-sm text-gray-300">{s.name}</span>
-              </div>
-            ))}
+          <h1 className="text-7xl font-extrabold">{data.name}</h1>
+          <h2 className="text-2xl text-[#D4AF37]">{data.role}</h2>
+          <p className="text-xl text-gray-400 max-w-2xl">{data.heroText}</p>
+          <div className="flex gap-4">
+            <a href="/cv.pdf" download="Zakaria_Alkhani_CV.pdf" className="px-6 py-3 rounded-lg bg-[#D4AF37] text-black font-semibold flex items-center gap-2"><Download className="w-5 h-5" /> Download CV</a>
+            <a href="mailto:zakariayahia52@gmail.com" className="px-6 py-3 rounded-lg border border-gray-700">Get In Touch</a>
+            <a href="https://www.linkedin.com/in/zakaria-yahia-271073284" target="_blank" className="px-6 py-3 rounded-lg border border-gray-700 flex items-center gap-2"><Linkedin className="w-5 h-5" /> LinkedIn</a>
           </div>
         </section>
 
-        {/* Interactive Carousels */}
-        <section className="grid md:grid-cols-2 gap-12 pt-20">
-          <div className="bg-[#0F0F0F] p-8 rounded-3xl">
-             <h4 className="text-2xl font-bold mb-4">{t.projects[activeProj].title}</h4>
-             <p className="text-gray-400 mb-6 h-20">{t.projects[activeProj].desc}</p>
-             <button onClick={() => prev(t.projects, setActiveProj, activeProj)} className="p-2 border rounded-full mr-2"><ChevronLeft /></button>
-             <button onClick={() => next(t.projects, setActiveProj, activeProj)} className="p-2 border rounded-full"><ChevronRight /></button>
-          </div>
-          <div className="bg-[#0F0F0F] p-8 rounded-3xl">
-             <h4 className="text-2xl font-bold mb-4">{t.certs[activeCert].name}</h4>
-             <p className="text-gray-400 mb-6 h-20">{t.certs[activeCert].issuer}</p>
-             <button onClick={() => prev(t.certs, setActiveCert, activeCert)} className="p-2 border rounded-full mr-2"><ChevronLeft /></button>
-             <button onClick={() => next(t.certs, setActiveCert, activeCert)} className="p-2 border rounded-full"><ChevronRight /></button>
-          </div>
+        <section id="about">
+          <h3 className="text-4xl font-bold mb-12">About Me</h3>
+          <div className="grid md:grid-cols-2 gap-12 text-gray-400 text-lg">{data.about.map((p, i) => <p key={i}>{p}</p>)}</div>
+        </section>
+
+        <section id="skills" className="text-center">
+            <h3 className="text-4xl font-bold mb-12">Skills & Tools</h3>
+            <div className="flex flex-wrap justify-center gap-6">{data.skills.map((s, i) => <div key={i} className="bg-[#0F0F0F] border border-[#1A1A1A] rounded-2xl p-6 flex flex-col items-center w-[150px] transition-all duration-300 hover:scale-110 hover:border-[#D4AF37] hover:shadow-lg hover:shadow-[#D4AF37]/20">{s.icon}<span className="mt-4 text-sm text-gray-300">{s.name}</span></div>)}</div>
+        </section>
+
+        <section id="projects" className="bg-[#0F0F0F] border border-[#1A1A1A] rounded-3xl p-12 text-center">
+             <h3 className="text-4xl font-bold mb-12">Projects</h3>
+             <h4 className="text-3xl font-bold mb-4">{data.projects[activeProj].title}</h4>
+             <p className="text-gray-400 text-lg mb-8 max-w-2xl mx-auto">{data.projects[activeProj].desc}</p>
+             <div className="flex justify-center gap-4"><button onClick={() => setActiveProj((activeProj - 1 + data.projects.length) % data.projects.length)} className="p-2 border rounded-full"><ChevronLeft /></button><button onClick={() => setActiveProj((activeProj + 1) % data.projects.length)} className="p-2 border rounded-full"><ChevronRight /></button></div>
+        </section>
+
+        <section id="experience" className="bg-[#D4AF37] text-black rounded-3xl p-12">
+            <h3 className="text-4xl font-bold mb-8">Experience</h3>
+            <h4 className="text-2xl font-bold mb-2">{data.experience.company}</h4>
+            <p className="font-semibold mb-6">{data.experience.role}</p>
+            <ul className="space-y-4">{data.experience.points.map((pt, i) => <li key={i} className="text-lg font-medium">• {pt}</li>)}</ul>
+        </section>
+
+        <section id="certs" className="bg-[#0F0F0F] border border-[#1A1A1A] rounded-3xl p-12 text-center pb-20">
+             <h3 className="text-4xl font-bold mb-12">Certifications</h3>
+             <h4 className="text-xl font-bold text-white mb-4">{data.certs[activeCert].name}</h4>
+             <div className="flex justify-center gap-4"><button onClick={() => setActiveCert((activeCert - 1 + data.certs.length) % data.certs.length)} className="p-2 border rounded-full"><ChevronLeft /></button><button onClick={() => setActiveCert((activeCert + 1) % data.certs.length)} className="p-2 border rounded-full"><ChevronRight /></button></div>
         </section>
       </div>
     </main>
