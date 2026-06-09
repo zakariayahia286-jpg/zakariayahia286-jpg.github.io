@@ -762,7 +762,7 @@ export default function Portfolio() {
       <footer className="border-t border-gray-800 bg-gray-900 mt-auto">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center text-gray-400 text-sm">
-            <p>&copy; 2025 Arvians-ID</p>
+            <p>&copy; 2025 zakaria yahia  </p>
           </div>
         </div>
       </footer>
