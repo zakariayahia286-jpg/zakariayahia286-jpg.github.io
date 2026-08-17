@@ -1,11 +1,21 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { Mail, Linkedin, Download, ChevronRight, ChevronLeft, Award, BookOpen, Briefcase, Code, Database, Layout, Server, Cpu } from "lucide-react"
 
 export default function Home() {
   const [activeProj, setActiveProj] = useState(0)
   const [activeCert, setActiveCert] = useState(0)
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+
+  // Tracks the mouse position for the "flashlight" effect
+  useEffect(() => {
+    const updateMousePosition = (e: MouseEvent) => {
+      setMousePosition({ x: e.clientX, y: e.clientY })
+    }
+    window.addEventListener("mousemove", updateMousePosition)
+    return () => window.removeEventListener("mousemove", updateMousePosition)
+  }, [])
 
   const data = {
     name: "Zakaria Alkhani",
@@ -80,11 +90,16 @@ export default function Home() {
   return (
     <main className="relative min-h-screen bg-slate-950 text-[#E0E0E0] font-sans p-6 md:p-20 overflow-hidden selection:bg-teal-500/30">
       
-      {/* INTERACTIVE AMBIENT BACKGROUND */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        <div className="absolute top-[-10%] left-[-10%] w-[40rem] h-[40rem] bg-teal-600/20 rounded-full mix-blend-screen blur-[120px] animate-pulse"></div>
-        <div className="absolute bottom-[-10%] right-[-10%] w-[40rem] h-[40rem] bg-blue-600/20 rounded-full mix-blend-screen blur-[120px] animate-pulse" style={{ animationDelay: '2s' }}></div>
-      </div>
+      {/* 1. MOUSE FLASHLIGHT EFFECT */}
+      <div 
+        className="pointer-events-none fixed inset-0 z-30 transition-opacity duration-300"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(45,212,191,0.08), transparent 40%)`
+        }}
+      />
+
+      {/* 2. SUBTLE ARCHITECTURAL GRID BACKGROUND */}
+      <div className="fixed inset-0 z-0 pointer-events-none bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
 
       <div className="relative z-10 max-w-5xl mx-auto space-y-32">
         
@@ -102,10 +117,10 @@ export default function Home() {
             {data.heroText}
           </p>
           <div className="flex flex-wrap gap-4 pt-4">
-            <a href="/cv.pdf" download="Zakaria_Alkhani_CV.pdf" className="px-8 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold flex items-center gap-2 transition-all hover:bg-white/20 hover:scale-105 hover:border-teal-400/50 hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
+            <a href="/cv.pdf" download="Zakaria_Alkhani_CV.pdf" className="relative z-40 px-8 py-4 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-semibold flex items-center gap-2 transition-all hover:bg-white/20 hover:scale-105 hover:border-teal-400/50 hover:shadow-[0_0_20px_rgba(45,212,191,0.3)]">
               <Download className="w-5 h-5" /> Download CV
             </a>
-            <a href="https://www.linkedin.com/in/zakaria-yahia-271073284" target="_blank" rel="noreferrer" className="px-8 py-4 rounded-full border border-slate-700 text-slate-300 flex items-center gap-2 transition-all hover:bg-white/5 hover:text-white hover:border-slate-400">
+            <a href="https://www.linkedin.com/in/zakaria-yahia-271073284" target="_blank" rel="noreferrer" className="relative z-40 px-8 py-4 rounded-full border border-slate-700 text-slate-300 flex items-center gap-2 transition-all hover:bg-white/5 hover:text-white hover:border-slate-400 hover:shadow-[0_0_20px_rgba(255,255,255,0.1)]">
               <Linkedin className="w-5 h-5" /> LinkedIn
             </a>
           </div>
@@ -135,7 +150,7 @@ export default function Home() {
         {/* PROJECTS CAROUSEL */}
         <section id="projects" className="space-y-10">
            <h3 className="text-4xl font-bold border-b border-white/10 pb-4 inline-block">Featured Projects</h3>
-           <div className="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 md:p-12 relative overflow-hidden group">
+           <div className="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 md:p-12 relative overflow-hidden group hover:border-teal-500/30 transition-colors duration-500">
              
              <div className="relative z-10">
                 <h4 className="text-3xl font-bold mb-4 text-white">{data.projects[activeProj].title}</h4>
@@ -149,11 +164,11 @@ export default function Home() {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-4">
-                  <button onClick={() => setActiveProj((activeProj - 1 + data.projects.length) % data.projects.length)} className="p-3 border border-slate-700 rounded-full hover:bg-slate-800 hover:border-teal-500/50 transition-all text-slate-300 hover:text-white">
+                <div className="flex gap-4 relative z-40">
+                  <button onClick={() => setActiveProj((activeProj - 1 + data.projects.length) % data.projects.length)} className="p-3 border border-slate-700 rounded-full hover:bg-slate-800 hover:border-teal-500/50 transition-all text-slate-300 hover:text-white hover:scale-110">
                     <ChevronLeft className="w-6 h-6" />
                   </button>
-                  <button onClick={() => setActiveProj((activeProj + 1) % data.projects.length)} className="p-3 border border-slate-700 rounded-full hover:bg-slate-800 hover:border-teal-500/50 transition-all text-slate-300 hover:text-white">
+                  <button onClick={() => setActiveProj((activeProj + 1) % data.projects.length)} className="p-3 border border-slate-700 rounded-full hover:bg-slate-800 hover:border-teal-500/50 transition-all text-slate-300 hover:text-white hover:scale-110">
                     <ChevronRight className="w-6 h-6" />
                   </button>
                 </div>
@@ -166,7 +181,7 @@ export default function Home() {
             <h3 className="text-4xl font-bold border-b border-white/10 pb-4 inline-block">Experience</h3>
             <div className="grid gap-8">
               {data.experience.map((exp, i) => (
-                <div key={i} className="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 md:p-10 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800/80 hover:border-blue-500/50">
+                <div key={i} className="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 md:p-10 transition-all duration-500 hover:-translate-y-1 hover:bg-slate-800/80 hover:border-blue-500/50 hover:shadow-[0_10px_30px_-15px_rgba(59,130,246,0.3)]">
                   <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-6 gap-2">
                     <div>
                       <h4 className="text-2xl font-bold text-white mb-1">{exp.role}</h4>
@@ -191,7 +206,7 @@ export default function Home() {
 
         {/* EDUCATION & CERTIFICATIONS */}
         <div className="grid md:grid-cols-2 gap-8 pb-20">
-          <section id="education" className="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-10 transition-all hover:border-emerald-500/50">
+          <section id="education" className="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-10 transition-all duration-500 hover:border-emerald-500/50 hover:shadow-[0_10px_30px_-15px_rgba(16,185,129,0.3)]">
               <BookOpen className="w-10 h-10 text-emerald-400 mb-6" />
               <h3 className="text-3xl font-bold mb-6 text-white">Education</h3>
               <h4 className="text-xl font-bold text-slate-200 mb-2">{data.education.uni}</h4>
@@ -199,18 +214,18 @@ export default function Home() {
               <p className="text-slate-500 font-medium">{data.education.date}</p>
           </section>
 
-          <section id="certs" className="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-10 transition-all hover:border-purple-500/50 relative overflow-hidden">
+          <section id="certs" className="bg-slate-900/40 backdrop-blur-xl border border-slate-800 rounded-3xl p-10 transition-all duration-500 hover:border-purple-500/50 hover:shadow-[0_10px_30px_-15px_rgba(168,85,247,0.3)] relative overflow-hidden">
               <Award className="w-10 h-10 text-purple-400 mb-6" />
               <h3 className="text-3xl font-bold mb-6 text-white">Certifications</h3>
               <div className="min-h-[120px]">
                 <h4 className="text-xl font-bold text-slate-200 mb-2">{data.certs[activeCert].name}</h4>
                 <p className="text-slate-400">{data.certs[activeCert].issuer} • {data.certs[activeCert].date}</p>
               </div>
-              <div className="flex gap-4 mt-6">
-                <button onClick={() => setActiveCert((activeCert - 1 + data.certs.length) % data.certs.length)} className="p-2 border border-slate-700 rounded-full hover:bg-slate-800 hover:border-purple-500/50 transition-all text-slate-300 hover:text-white">
+              <div className="flex gap-4 mt-6 relative z-40">
+                <button onClick={() => setActiveCert((activeCert - 1 + data.certs.length) % data.certs.length)} className="p-2 border border-slate-700 rounded-full hover:bg-slate-800 hover:border-purple-500/50 transition-all text-slate-300 hover:text-white hover:scale-110">
                   <ChevronLeft className="w-5 h-5" />
                 </button>
-                <button onClick={() => setActiveCert((activeCert + 1) % data.certs.length)} className="p-2 border border-slate-700 rounded-full hover:bg-slate-800 hover:border-purple-500/50 transition-all text-slate-300 hover:text-white">
+                <button onClick={() => setActiveCert((activeCert + 1) % data.certs.length)} className="p-2 border border-slate-700 rounded-full hover:bg-slate-800 hover:border-purple-500/50 transition-all text-slate-300 hover:text-white hover:scale-110">
                   <ChevronRight className="w-5 h-5" />
                 </button>
               </div>
