@@ -70,7 +70,7 @@ export default function Home() {
         ] 
       }
     ],
-    education: { uni: "Ajman University", degree: "BSc Information Systems and E-Business Management", date: "Expected 2026" },
+    education: { uni: "Ajman University", degree: "BSc Information Systems and E-Business Management", date: "January 2027" },
     certs: [
       { name: "SAP Dual Study Program", issuer: "SAP", date: "Jun 2026" },
       { name: "SAP S/4HANA Cloud Public Edition", issuer: "SAP", date: "2026" },
